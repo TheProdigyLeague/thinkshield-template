@@ -1,0 +1,52 @@
+---
+import Logo from "../../assets/logo/logo.jpg";
+
+import LoginButton from "../authentication/LoginButton";
+import SearchIcon from "../search/SearchIcon.jsx";
+import AppTopBarMenu from "./AppTopBarMenu.jsx";
+---
+
+<div
+  id="navbar"
+  class="px-6 shadow-2 flex justify-content-between align-items-center relative"
+  style="min-height: 70px"
+>
+  <img
+    src={Logo.src}
+    alt="bastion-700"
+    height={60}
+    width={80}
+    class="mr-0 lg:mr-6 align-self-center"
+  />
+  <div
+    class="flex-grow-1 justify-content-center hidden lg:flex absolute lg:static left-0 top-100 z-1 shadow-2 lg:shadow-none"
+  >
+    <AppTopBarMenu client:idle />
+  </div>
+  <div class="flex align-items-center justify-content-around">
+    <SearchIcon client:idle />
+    <LoginButton client:load />
+  </div>
+
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos >= currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-80px";
+      }
+    };
+  </script>
+
+  <style>
+    #navbar {
+      background-color: white;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      transition: top 0.4s;
+    }
+  </style>
+</div>

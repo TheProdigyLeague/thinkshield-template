@@ -1,0 +1,95 @@
+---
+// Core
+import "primeflex/primeflex.css";
+import "primeicons/primeicons.css";
+import "primereact/resources/primereact.min.css";
+// Fonts
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+
+// Components
+import AppFooter from "../components/footer/AppFooter.astro";
+import AppBottomBar from "../components/navigation/AppBottomBar";
+import AppTopBar from "../components/navigation/AppTopBar.astro";
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- Fonts -->
+    <GoogleFontsOptimizer
+      url="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap"
+    />
+
+    <!-- CSS -->
+    <script
+      id="app-theme"
+      type="module"
+      src="/node_modules/primereact/resources/themes/bootstrap4-light-blue/theme.css"
+    ></script>
+    <script
+      id="primeflex"
+      type="module"
+      src="/node_modules/primeflex/primeflex.css"></script>
+  </head>
+  <body>
+    <AppTopBar />
+    <main>
+      <slot />
+    </main>
+    <AppFooter />
+    <AppBottomBar />
+    <style is:global>
+      @font-face {
+        font-family: "SolarVestaScript";
+        src: url("/fonts/Solar Vesta Script.tff") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+      :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family: system-ui, sans-serif;
+        background-color: #f6f6f6;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: #fff;
+      }
+      main {
+        width: 100%;
+      }
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+      .no-bg {
+        background: transparent !important;
+      }
+    </style>
+    <script>
+      import PrimeReact from "primereact/api";
+      PrimeReact.ripple = true;
+    </script>
+  </body>
+</html>

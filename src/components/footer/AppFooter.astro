@@ -1,0 +1,198 @@
+---
+import "primeflex/primeflex.css";
+import "primeicons/primeicons.css";
+import { Button } from "primereact/button";
+import { Divider } from "primereact/divider";
+import { InputText } from "primereact/inputtext";
+import "primereact/resources/primereact.min.css";
+const backgroundColor = " rgba( 255, 255, 255, 1 )";
+---
+
+<div class="background-gradient px-4 py-4 md:px-4 lg:px-8">
+  <Divider layout="horizontal" />
+  <div class="grid grid-nogutter text-center lg:text-left">
+    <div class="col-12 sm:col-6 md:col-4 lg:col-3 mt-4 flex flex-column">
+      <span class="text-900 text-xl font-medium block"> FOLLOW US ON</span>
+      <div
+        class="flex align-items-center w-full mt-5 justify-content-center lg:justify-content-start"
+      >
+        <a tabindex="0" class="cursor-pointer mr-3">
+          <i class="pi pi-facebook surface-900 p-1 text-sm border-circle text-0"
+          ></i>
+        </a>
+        <a tabindex="0" class="cursor-pointer mr-3">
+          <i class="pi pi-twitter surface-900 p-1 text-sm border-circle text-0"
+          ></i>
+        </a>
+        <a tabindex="0" class="cursor-pointer mr-3">
+          <i class="pi pi-youtube surface-900 p-1 text-sm border-circle text-0"
+          ></i>
+        </a>
+        <a tabindex="0" class="cursor-pointer">
+          <i class="pi pi-google surface-900 p-1 text-sm border-circle text-0"
+          ></i>
+        </a>
+      </div>
+      <div class="text-600 block mt-4">
+        <span class="text-900 text-xl font-medium"> PAYMENT METHODS</span>
+      </div>
+      <a
+        class="surface-section lg:flex-row justify-content-between align-items-center"
+      >
+        <div class="flex">
+          <img
+            src="src/assets/images/apple-pay.jpeg"
+            class="w-3rem mr-3"
+            alt="Apple Pay"
+          />
+          <img
+            src="src/assets/images/Mastercard_logo.png"
+            class="w-3rem mr-3"
+            alt="Mastercard"
+          />
+          <img
+            src="src/assets/images/Visa_logo.png"
+            class="w-3rem mr-3"
+            alt="Visa"
+          />
+          <img
+            src="src/assets/images/Paypal.png"
+            class="w-3rem mr-3"
+            alt="PayPal"
+          />
+        </div>
+      </a>
+    </div>
+    <div class="col-12 sm:col-6 md:col-4 lg:col-3 mt-4 flex flex-column">
+      <span class="text-900 text-xl font-medium block"> ABOUT US</span>
+      <ul class="list-none p-0">
+        <li>
+          <a
+            tabindex="0"
+            class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+          >
+            Contact Us
+          </a>
+        </li>
+        <li>
+          <a
+            tabindex="0"
+            class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+          >
+            Customer care
+          </a>
+        </li>
+        <li>
+          <a
+            tabindex="0"
+            class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+          >
+            Legal informations
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-12 sm:col-6 md:col-4 lg:col-3 mt-4 flex flex-column">
+      <span class="text-xl font-medium block"> FAQ</span>
+      <ul class="list-none p-0">
+        <li>
+          <a
+            tabindex="0"
+            class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+          >
+            Seller
+          </a>
+        </li>
+        <li>
+          <a
+            tabindex="0"
+            class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+          >
+            Buyer
+          </a>
+        </li>
+        <li>
+          <a
+            tabindex="0"
+            class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+          >
+            Consignment
+          </a>
+        </li>
+        <li>
+          <a
+            tabindex="0"
+            class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+          >
+            Authenticity
+          </a>
+        </li>
+        <li>
+          <a
+            tabindex="0"
+            class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+          >
+            Shipping
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-12 sm:col-6 md:col-4 lg:col-3 mt-4 flex flex-column">
+      <span class="text-900 text-xl text-white font-medium block">
+        JOIN NOW</span
+      >
+      <ul class="list-none p-0">
+        <li>
+          <a
+            tabindex="0"
+            class="text-300 hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+            ><img
+              src="src/assets/images/LogoM.png"
+              alt="Peak logo"
+              style="width:80px"
+            />
+            <div>
+              <InputText className="col-6 text-pink-500" placeholder="Email" />
+              <Button rounded label="sign up" type="submit" />
+            </div>
+            <div class="text-900 text-center block mt-4 mr-3">
+              <i
+                >Sign up for early access, new in, promotions and many many
+                more...</i
+              >
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-900 text-center block mt-4 mr-3">
+      Axcept for Brand Partner items Luxury Mall has no association and
+      affilition with brands whose items and offerred for sale on its
+      website/app. Except for Brand Approved items the authentication is for
+      Brand Approved performent independently by Luxury Mall
+    </div>
+  </div>
+  <div class="col-12 text-center">
+    <ul
+      class="col-12 list-none p-0 mb-0 flex justify-content-center flex-column md:flex-row flex-order-1 lg:flex-order-0 mt-4 lg:mt-0"
+    >
+      <li class="mr-4 mt-3 lg:mt-0">
+        <a tabindex="0" class="cursor-pointer"> Privacy Policy</a>
+      </li>
+      <li class="mr-4 mt-3 lg:mt-0">
+        <a tabindex="0" class="cursor-pointer"> Terms & Conditions</a>
+      </li>
+      <li class="mr-4 mt-3 lg:mt-0">
+        <a tabindex="0" class="cursor-pointer"> Cookie settings</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-12 text-gray-500 text-center mt-4">
+    <i>© Copyright 2022, Luxury Mall Limited. All rights reserverd.</i>
+  </div>
+</div>
+<style is:inline define:vars={{ backgroundColor }}>
+  .background-gradient {
+    background: var(--backgroundColor);
+  }
+</style>
