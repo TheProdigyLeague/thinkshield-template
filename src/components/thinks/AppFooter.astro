@@ -1,0 +1,189 @@
+---
+import "primeflex/primeflex.css";
+import "primeicons/primeicons.css";
+import { Button } from "primereact/button";
+import { InputText } from "primereact/inputtext";
+import "primereact/resources/primereact.min.css";
+import "./app-footer.css";
+import { InputTextarea } from "primereact/inputtextarea";
+---
+
+<div class="background-footer col-12">
+  <div class="flex flex-column px-4 py-4 md:px-4 lg:px-8">
+    <div class="col-12 grid grid-nogutter text-center lg:text-left">
+      <div class="col-6 sm:col-6 md:col-4 lg:col-3 mt-2">
+        <div
+          class="transition-duration-150 mt-3 block text-300 text-black-alpha-80 block mt-4 mr-3"
+        >
+          <div class="flex justify-content-center flex-column text-green-500">
+            <img
+              src="src/assets/images/logoHere.jpg"
+              alt="thinks logo"
+              style="width:160px"
+            />
+            <p>Caring for Community</p>
+          </div>
+
+          <div class="text-900 text-black-alpha-80 block mt-4 mr-3">
+            For further information on how <span class="text-900 text-green-500"
+              >ThinkShield</span
+            > can support you or your organisation please contact:
+            <div class="mt-5">
+              <div>
+                <span class="text-900 text-green-500">ThinkVitals</span> is the brand
+                name of <span class="text-900 text-green-500"
+                  >ThinkShield Ltd.</span
+                >
+              </div>
+              <div>
+                <span class="text-900 text-green-500">ThinkShield</span> is registered
+                in England and Wales Company number: 5161513.
+              </div>
+            </div>
+          </div>
+          <div class="cursor-pointer">
+            <Button
+              className="cursor-pointer border-round-3xl "
+              severity="success"
+              label="Submit"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-2 sm:col-3 md:col-4 lg:col-3 mt-2 text-black-alpha-60">
+        <span class="text-900 text-5xl text-black-alpha-80"> About us</span>
+        <ul class="list-none p-0">
+          <li>
+            <a
+              class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+            >
+              Our services
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+            >
+              Our partners
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+            >
+              Our privacy Policies
+            </a>
+          </li>
+          <li class="text-black-alpha-80 mt-6">
+            Email:
+            <div
+              class="hover:text-900 transition-duration-150 cursor-pointer mt-0 block"
+            >
+              <InputText
+                className="w-15rem border-round-xl background-inputtext col-6 mb-2 ml-0"
+              />
+            </div>
+          </li>
+          <li class="text-black-alpha-80">
+            Full Name:
+            <div>
+              <InputText
+                className="w-15rem border-round-xl background-inputtext col-6 mb-2"
+              />
+            </div>
+          </li>
+          <li class="text-black-alpha-80">
+            Organization:
+            <div>
+              <InputText
+                className="w-15rem border-round-xl background-inputtext col-6 mb-2"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-2 sm:col-3 md:col-4 lg:col-3 mt-2 text-black-alpha-60">
+        <span class="text-900 text-5xl text-black-alpha-80">Products</span>
+        <ul class="list-none p-0">
+          <li>
+            <a
+              class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+            >
+              ThinkShield Ltd.
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+            >
+              ThinkVitals ED.
+            </a>
+          </li>
+          <li class="mt-8 text-black-alpha-80">
+            Telephone:
+            <div>
+              <InputText
+                className="border-round-xl background-inputtext col-6 mb-2"
+              />
+            </div>
+          </li>
+          <li class="text-black-alpha-80">
+            Postal address:
+            <div>
+              <InputTextarea
+                rows={5}
+                className="border-round-xl background-inputtext col-10 mb-2"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-2 sm:col-3 md:col-4 lg:col-3 mt-2 text-black-alpha-60">
+        <span class="text-900 text-5xl text-black-alpha-80">Contact us</span>
+        <ul class="list-none p-0">
+          <li>
+            <a
+              class="pi pi-home hover:text-900 transition-duration-150 cursor-pointer mt-3 block text-900 text-orange-500"
+            >
+              ThinkShield Ltd.</a
+            >
+          </li>
+          <li>
+            <a
+              class="pi pi-home hover:text-900 transition-duration-150 cursor-pointer mt-3 block text-900 text-orange-500"
+            >
+              ThinkShield India Pvt. Ltd.</a
+            >
+          </li>
+          <li>
+            <a
+              class="pi pi-inbox hover:text-900 transition-duration-150 cursor-pointer mt-3 block"
+            >
+              Accounts@thinkshield.com
+            </a>
+          </li>
+          <li class="text-black-alpha-80 mt-6">
+            Subject:
+            <div>
+              <InputText
+                className="w-13rem border-round-xl background-inputtext col-6 mb-2"
+              />
+            </div>
+          </li>
+          <li class="text-black-alpha-80">
+            Message:
+            <div>
+              <InputTextarea
+                rows={5}
+                className="border-round-xl background-inputtext col-10 mb-2"
+              />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 text-gray-500 text-center">
+    <i>© Copyright 2022, ThinkShield. All rights reserverd.</i>
+  </div>
+</div>

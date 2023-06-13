@@ -1,0 +1,10 @@
+.background-footer {
+  background-color: rgba(236, 242, 228, 0.25);
+}
+.background-inputtext {
+  background: rgba(89, 128, 43, 0.6);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

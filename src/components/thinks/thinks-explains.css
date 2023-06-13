@@ -1,0 +1,8 @@
+.text-header {
+  font-size: 1.75rem;
+  background-color: var(--green-100);
+}
+.text-explains {
+  font-size: 1.125rem;
+  color: rgba(0, 0, 0, 0.9);
+}
