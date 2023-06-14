@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Dialog } from "primereact/dialog";
-import { Button } from "primereact/button";
+import * as dialog from "primereact/dialog/dialog.esm";
+const { Dialog } = dialog;
+import * as button from "primereact/button/button.esm";
+const { Button } = button;
 import "primeicons/primeicons.css";
 
 const SidebarQuickview = () => {

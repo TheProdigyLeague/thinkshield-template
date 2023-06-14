@@ -2,19 +2,20 @@ import partytown from "@astrojs/partytown";
 import react from "@astrojs/react";
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-
 import vercel from "@astrojs/vercel/serverless";
+
+import netlify from "@astrojs/netlify/edge-functions";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
+  output: "hybrid",
   experimental: {
-    assets: true
+    assets: true,
   },
   server: {
     port: 3010,
-    host: true
+    host: true,
   },
   integrations: [partytown(), react(), sitemap()],
-  adapter: vercel()
+  adapter: netlify(),
 });

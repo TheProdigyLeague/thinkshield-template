@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./product.css";
-import { ToggleButton } from "primereact/togglebutton";
+import * as togglebutton from "primereact/togglebutton/togglebutton.esm";
+const { ToggleButton } = togglebutton;
+
 const Product = () => {
   const [checked, setChecked] = useState(false);
   return (

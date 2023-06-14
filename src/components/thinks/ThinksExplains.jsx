@@ -1,6 +1,7 @@
-import React from "react";
-import { Accordion, AccordionTab } from "primereact/accordion";
-import { Image } from "primereact/image";
+import * as accordion from "primereact/accordion/accordion.esm.js";
+const { Accordion, AccordionTab } = accordion;
+import * as image from "primereact/image/image.esm";
+const { Image } = image;
 import "./thinks-explains.css";
 
 const ThinksExplains = () => {

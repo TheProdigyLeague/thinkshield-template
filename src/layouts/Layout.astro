@@ -10,7 +10,8 @@ import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 import AppFooter from "../components/thinks/AppFooter.astro";
 import AppBottomBar from "../components/navigation/AppBottomBar";
 import AppTopBar from "../components/navigation/AppTopBar.astro";
-import { Button } from "primereact/button";
+import * as button from "primereact/button/button.esm";
+const { Button } = button;
 export interface Props {
   title: string;
 }

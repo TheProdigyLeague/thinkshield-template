@@ -1,11 +1,14 @@
 ---
 import "primeflex/primeflex.css";
 import "primeicons/primeicons.css";
-import { Button } from "primereact/button";
-import { InputText } from "primereact/inputtext";
+import * as button from "primereact/button/button.esm";
+const { Button } = button;
+import * as inputtext from "primereact/inputtext/inputtext.esm";
+const { InputText } = inputtext;
 import "primereact/resources/primereact.min.css";
 import "./app-footer.css";
-import { InputTextarea } from "primereact/inputtextarea";
+import * as inputtextarea from "primereact/inputtextarea";
+const { InputTextarea } = inputtextarea;
 ---
 
 <div id="test" class="bg-white col-12">
