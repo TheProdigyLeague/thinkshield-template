@@ -1,6 +1,5 @@
 ---
-import * as button from "primereact/button/button.esm";
-const { Button } = button;
+import PrimeReactButton from "./PrimeReactButton";
 ---
 
 <div class="col-12 h-full flex flex-column justify-content-center">
@@ -21,12 +20,7 @@ const { Button } = button;
         development and integration.
       </p>
       <div class="flex justify-content-center">
-        <Button
-          className=" col-6  align-items-center text-green-500 hover:text-white  hover:bg-green-400 border-green-300 "
-          label="For more details"
-          text
-          rounded
-        />
+        <PrimeReactButton client:load />
       </div>
     </div>
     <div
@@ -43,12 +37,7 @@ const { Button } = button;
         including HL7 and FHIR
       </p>
       <div class="flex justify-content-center">
-        <Button
-          className=" col-6  align-items-center text-green-500 hover:text-white  hover:bg-green-400 border-green-300 "
-          label="For more details"
-          text
-          rounded
-        />
+        <PrimeReactButton client:load />
       </div>
     </div>
     <div
@@ -64,12 +53,7 @@ const { Button } = button;
         needs.
       </p>
       <div class="flex justify-content-center">
-        <Button
-          className=" col-6  align-items-center text-green-500 hover:text-white  hover:bg-green-400 border-green-300 "
-          label="For more details"
-          text
-          rounded
-        />
+        <PrimeReactButton client:load />
       </div>
     </div>
   </div>
