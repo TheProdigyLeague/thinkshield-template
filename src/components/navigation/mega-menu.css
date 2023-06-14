@@ -9,5 +9,5 @@
 }
 
 .p-menuitem-link:hover {
-  background: aliceblue !important;
+  background: var(--green-300) !important;
 }

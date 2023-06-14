@@ -1,0 +1,124 @@
+---
+import { Button } from "primereact/button";
+import img from "../../assets/images/frame185562.jpg";
+---
+
+<div class="col-12 h-full flex flex-column justify-content-center">
+  <div class="col-12 text-center text-5xl font-bold text-green-700">
+    Providing our best IT services and solutions
+  </div>
+  <div class="col-12 grid justify-content-center sm:p-0 sx:p-0 p-4">
+    <div
+      class="flex flex-column xl:col-3 p-3 lg:col-6 md:col-12 bg-providing-card text-center m-6 zoom glassmorphism-card height-card"
+    >
+      <img class="product-img-wrapper" src="src/assets/images/Tablee.png" />
+      <div class="text-3xl font-semibold text-green-600">
+        Application Development
+      </div>
+      <p class="text-xl text-gray-900">
+        ThinkShield Ltd. experience encompasses a broad range of technology
+        products and application frameworks, and we are specialists in both
+        development and integration.
+      </p>
+      <div class="flex justify-content-center">
+        <Button
+          className=" col-6  align-items-center text-green-500 hover:text-white  hover:bg-green-400 border-green-300 "
+          label="For more details"
+          text
+          rounded
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-column xl:col-3 lg:col-6 md:col-12 bg-providing-card text-center m-6 zoom glassmorphism-card height-card overflow"
+    >
+      <img
+        class="product-img-wrapper"
+        src="src/assets/images/frame185562.jpg"
+      />
+      <div class="text-3xl font-semibold text-green-600">Integration</div>
+      <p class="text-xl text-green-900">
+        Integration enables disparate systems to communicate, we follow best
+        practice and standards supporting a number of messaging protocols
+        including HL7 and FHIR
+      </p>
+      <div class="flex justify-content-center">
+        <Button
+          className=" col-6  align-items-center text-green-500 hover:text-white  hover:bg-green-400 border-green-300 "
+          label="For more details"
+          text
+          rounded
+        />
+      </div>
+    </div>
+    <div
+      class="flex flex-column xl:col-3 lg:col-6 md:col-12 bg-providing-card text-center m-6 zoom glassmorphism-card height-card overflow"
+    >
+      <img class="product-img-wrapper" src="src/assets/images/frame18556.jpg" />
+      <div class="text-3xl font-semibold text-green-600">
+        Application Development
+      </div>
+      <p class="text-xl text-gray-700">
+        We take pride in the solutions we offer and so like to provide our
+        customers with support options that don’t break the bank and fit their
+        needs.
+      </p>
+      <div class="flex justify-content-center">
+        <Button
+          className=" col-6  align-items-center text-green-500 hover:text-white  hover:bg-green-400 border-green-300 "
+          label="For more details"
+          text
+          rounded
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="col-12 text-center xl:text-3xl lg:text-xl md:text-md sm:text-sm sx:text-sx font-bold text-green-600"
+  >
+    We put our customers first, recognizing that security, data integrity,
+    quality, efficiency, and cost are critical elements to delivering, not only
+    successful IT Healthcare solutions, but also outstanding customer service.
+  </div>
+</div>
+
+<style>
+  .bg-providing {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .bg-providing-card {
+    background: rgba(255, 255, 255, 1) !important;
+  }
+  .product-img-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+  }
+
+  .zoom {
+    transition: transform 0.9s;
+  }
+  .glassmorphism-card {
+    border-radius: 16px;
+    backdrop-filter: blur(6.7px);
+    -webkit-backdrop-filter: blur(6.7px);
+    border: 1px solid rgba(85, 222, 173, 0.01);
+  }
+  .zoom:hover {
+    transform: scale(1.1);
+    border: 1px solid rgba(55, 163, 86, 0.8);
+  }
+  .overflow {
+    overflow: hidden;
+  }
+  .height-card {
+    min-height: 20vh;
+  }
+  .height-img {
+    height: 40vh;
+  }
+</style>

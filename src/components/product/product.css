@@ -1,0 +1,19 @@
+/* .hidden-img div img:hover {
+  height: 0;
+} */
+/* .bg-gradient1 {
+  background: #007991;
+  background: -webkit-linear-gradient(to right, #78ffd6, #007991);
+  background: linear-gradient(to right, #78ffd6, #007991);
+} */
+.bg-2 {
+  background-image: url("../../assets/images/bg-1.svg");
+  object-fit: cover;
+}
+.glassmorphism-card {
+  background: rgba(100, 128, 30, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(6.7px);
+  -webkit-backdrop-filter: blur(6.7px);
+  border: 1px solid rgba(85, 222, 173, 0.2);
+}

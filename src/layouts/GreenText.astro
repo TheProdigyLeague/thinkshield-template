@@ -1,0 +1,12 @@
+---
+export interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+//import
+import "primeicons/primeicons.css";
+---
+
+<span class="text-green-500">
+  {text}
+</span>

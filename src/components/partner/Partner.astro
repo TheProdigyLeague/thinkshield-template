@@ -1,0 +1,100 @@
+---
+const partnerList = [
+  "src/assets/images/partnerLogo.jpg",
+  "src/assets/images/partnerLogo2.jpg",
+  "src/assets/images/partnerLogo3.jpg",
+  "src/assets/images/partnerLogo5.jpg",
+  "src/assets/images/partnerLogo6.jpg",
+];
+---
+
+<div class="col-12 text-center">
+  <div class="text-5xl text-gray-800 font-bold m-4">Who we work with</div>
+  <div class="col-12 flex box">
+    {
+      partnerList.map((item, idx) => (
+        <div class="col-4">
+          <img
+            src={item}
+            class="border-round-xl border-green-100 border-solid bg-white p-3"
+            height="100vh"
+          />
+        </div>
+      ))
+    }
+  </div>
+  <div class="col-12 flex box-1">
+    {
+      partnerList.map((item, idx) => (
+        <div class="col-4">
+          <img
+            src={item}
+            class="border-round-xl border-green-100 border-solid bg-white p-3"
+            height="100vh"
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
+<div class="col-12 flex box">
+  {
+    partnerList.map((item, idx) => (
+      <div class="col-4 ">
+        <img
+          src={item}
+          class="border-round-xl border-green-100 border-solid bg-white p-3"
+          height="100vh"
+        />
+      </div>
+    ))
+  }
+</div>
+<div class="col-12 text-center text-3xl mt-6 text-green-500 font-bold mb-5">
+  ThinkShield as an organisation looks to add value and offer flexible
+  solutions.
+</div>
+<style>
+  .box {
+    margin: 10px -400px;
+    -webkit-animation-name: move;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: right;
+    -webkit-animation-timing-function: linear;
+  }
+
+  .box:hover {
+    -webkit-animation-play-state: paused;
+  }
+
+  @-webkit-keyframes move {
+    0% {
+      margin-left: -2000px;
+    }
+    100% {
+      margin-left: 0px;
+    }
+  }
+  .box-1 {
+    margin: 10px -400px;
+    -webkit-animation-name: move1;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: right;
+    -webkit-animation-timing-function: linear;
+  }
+
+  .box-1:hover {
+    -webkit-animation-play-state: paused;
+  }
+
+  @-webkit-keyframes move1 {
+    0% {
+      margin-left: 0px;
+    }
+    100% {
+      margin-left: -2000px;
+    }
+  }
+</style>

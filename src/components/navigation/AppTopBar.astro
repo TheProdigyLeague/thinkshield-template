@@ -1,9 +1,10 @@
 ---
-import Logo from "../../assets/logo/logo.jpg";
+import Logo from "../../assets/images/rectangle43092.jpg";
 
 import LoginButton from "../authentication/LoginButton";
 import SearchIcon from "../search/SearchIcon.jsx";
 import AppTopBarMenu from "./AppTopBarMenu.jsx";
+import { Button } from "primereact/button";
 ---
 
 <div
@@ -24,8 +25,13 @@ import AppTopBarMenu from "./AppTopBarMenu.jsx";
     <AppTopBarMenu client:idle />
   </div>
   <div class="flex align-items-center justify-content-around">
-    <SearchIcon client:idle />
-    <LoginButton client:load />
+    <a href="#test" class="no-underline">
+      <Button
+        label="Contact"
+        className="bg-green-400 hover:border-green-600 hover:bg-green-500 border-green-400"
+        rounded
+      />
+    </a>
   </div>
 
   <script>

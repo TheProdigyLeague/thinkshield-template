@@ -1,10 +1,78 @@
 ---
+import GreenText from "../layouts/GreenText.astro";
 import Layout from "../layouts/Layout.astro";
+import twoDrImg from "src/assets/images/frame185565.jpg";
+import Providing from "../components/providing/Providing.astro";
+import Product from "../components/product/Product.jsx";
+import Partner from "../components/partner/Partner.astro";
+import ThinksExplains from "../components/thinks/ThinksExplains";
 ---
 
-<Layout title="Welcome to Astro.">
-  <h1>Welcome to <span class="text-gradient">Astro</span></h1>
-  <!-- <SidebarQuickview client:idle />  -->
+<Layout title="Welcome to ThinkShield">
+  <div class="col-12 flex h-80 bg-image">
+    <div
+      class="col-5 hidden-1 h-full product-img-wrapper flex justify-content-center align-items-center"
+    >
+      <img class="product-img-wrapper" src="src/assets/images/frame18565.jpg" />
+    </div>
+
+    <div
+      class="xl:col-7 lg:col-12 flex justify-content-center align-items-center flex-column"
+    >
+      <div
+        class="text-2xl md:text-2xl sm:text-sm sx:text-sx font-semibold text-gray-700 text-center col-10 glassmorphism-card"
+      >
+        Welcome to the new <GreenText text="ThinkShield" />
+
+        <span class="text-2xl md:text-2xl sm:text-2xl sx:text-sx">
+          , home of ThinkVitals Community Health, we are a company driven by new
+          and innovative ideas developed by both a young and talented community
+          as well as some seasoned salts. We welcome diversity and believe that
+          we can only achieve the best by opening ourselves up to imagine a
+          better future
+        </span>
+      </div>
+      <div
+        class="col-10 hidden-1 flex justify-content-center align-items-center product-img-wrapper mt-4"
+      >
+        <img
+          class="img-opacity product-img"
+          src="src/assets/images/businessCheckingHerMail3DIllus.jpg"
+        />
+        <div
+          class="col-10 text-white text-center flex z-1 absolute"
+          style={{ top: "20%" }}
+        >
+          <div class="col-3 glassmorphism-card-2 m-2">
+            <p class="text-2xl font-semibold m-1 font-bold underline">10+</p>
+            <p class="m-1">Years of Experience</p>
+          </div>
+          <div class="col-3 text-white glassmorphism-card-2 m-2">
+            <p class="text-2xl m-1 font-bold underline">10+</p>
+            <p class="m-1">Healthcare locations</p>
+          </div>
+          <div
+            class="flex col-6 text-white align-items-center justify-content-center glassmorphism-card-2 m-2"
+          >
+            <a class="text-xl text-white font-bold p-2 border-round">
+              Request an Appointment
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="about" class="h-100 relative bg-providing">
+    <Providing />
+  </div>
+  <div id="product" class="h-80">
+    <Product client:load />
+  </div>
+  <div id="partner" class="overflow h-60 bg-parners">
+    <Partner />
+  </div><div id="policy" class="sub-bg">
+    <ThinksExplains client:load />
+  </div>
 </Layout>
 
 <style>
@@ -49,5 +117,82 @@ import Layout from "../layouts/Layout.astro";
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 1rem;
     padding: 0;
+  }
+  .product-img-wrapper {
+    height: 50vh;
+    padding: 7px;
+    position: relative;
+  }
+  .product-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+  }
+  .h-80 {
+    min-height: 90vh;
+  }
+  .h-60 {
+    min-height: 75vh;
+  }
+  .h-100 {
+    min-height: 100vh;
+  }
+  .bg-parners {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1904' height='790' preserveAspectRatio='none' viewBox='0 0 1904 790'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1082%26quot%3b)' fill='none'%3e%3crect width='1904' height='790' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c527 C 127%2c452.6 381%2c171.4 635%2c155 C 889%2c138.6 1016.2%2c450.2 1270%2c445 C 1523.8%2c439.8 1777.2%2c192.2 1904%2c129L1904 790L0 790z' fill='rgba(247%2c 249%2c 245%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1082'%3e%3crect width='1904' height='790' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  }
+  .img-opacity {
+    opacity: 0.9;
+  }
+
+  .bg-providing {
+    background: rgba(100, 128, 30, 0.05);
+  }
+  .color-green {
+    background: #579982;
+  }
+  .glassmorphism-card {
+    /* From https://css.glass */
+    background: rgba(195, 191, 191, 0.02);
+    border-radius: 16px;
+    backdrop-filter: blur(2.6px);
+    -webkit-backdrop-filter: blur(2.6px);
+    border: 1px solid rgba(195, 191, 191, 0.01);
+  }
+  .glassmorphism-card-2 {
+    /* From https://css.glass */
+    background: rgba(57, 146, 50, 0.5);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+  }
+  .bg-gradient {
+    background: rgba(255, 255, 255, 1);
+  }
+  .bg-image {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1904' height='900' preserveAspectRatio='none' viewBox='0 0 1904 900'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1188%26quot%3b)' fill='none'%3e%3crect width='1904' height='900' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c517 C 127%2c483 381%2c349.8 635%2c347 C 889%2c344.2 1016.2%2c500 1270%2c503 C 1523.8%2c506 1777.2%2c390.2 1904%2c362L1904 900L0 900z' fill='rgba(247%2c 249%2c 245%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1188'%3e%3crect width='1904' height='900' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    object-fit: cover;
+  }
+  .bg-image-1 {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1904' height='790' preserveAspectRatio='none' viewBox='0 0 1904 790'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1032%26quot%3b)' fill='none'%3e%3crect width='1904' height='790' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c455 C 95.2%2c404.2 285.6%2c165.2 476%2c201 C 666.4%2c236.8 761.6%2c622.4 952%2c634 C 1142.4%2c645.6 1237.6%2c301.2 1428%2c259 C 1618.4%2c216.8 1808.8%2c390.2 1904%2c423L1904 790L0 790z' fill='rgba(100%2c 128%2c 30%2c 0.05)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1032'%3e%3crect width='1904' height='790' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    object-fit: cover;
+    transform: rotate(180deg);
+  }
+  .overflow {
+    overflow: hidden;
+  }
+  .hidden-1 {
+    display: block;
+  }
+  @media screen and (max-width: 1213px) {
+    .hidden-1 {
+      display: none !important;
+    }
+  }
+  .sub-bg {
+    background: rgba(100, 128, 30, 0.05) !importan;
+  }
+  .font-3vw {
+    font-size: 3vw;
   }
 </style>

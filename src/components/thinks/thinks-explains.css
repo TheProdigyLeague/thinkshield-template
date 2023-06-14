@@ -1,8 +1,51 @@
 .text-header {
   font-size: 1.75rem;
-  background-color: var(--green-100);
+  background-color: var(--green-800);
 }
-.text-explains {
-  font-size: 1.125rem;
-  color: rgba(0, 0, 0, 0.9);
+.p-accordion-header-text {
+  color: var(--green-700);
+}
+.p-accordion-header:he {
+  background: #fff;
+  text-underline-offset: 1;
+}
+.p-accordion
+  .p-accordion-header:not(.p-highlight):not(.p-disabled):hover
+  .p-accordion-header-link {
+  background: #fff;
+  outline: none;
+}
+.p-accordion .p-accordion-header .p-accordion-header-link {
+  background: white;
+  margin-bottom: 1px;
+  border: none;
+  outline: none;
+}
+.p-accordion
+  .p-accordion-header:not(.p-disabled).p-highlight
+  .p-accordion-header-link {
+  background: white;
+  outline: none;
+}
+.p-accordion-content {
+  border: none;
+}
+.p-accordion .p-accordion-content {
+  border: none;
+}
+.p-accordion-header.p-highlight {
+  outline: none;
+}
+.hidden-scroll::-webkit-scrollbar {
+  display: none;
+}
+.bg-image-2 {
+  background-image: url("../../assets/images/bg-2.svg");
+  object-fit: cover;
+}
+.p-accordion
+  .p-accordion-header
+  .p-accordion-header-link
+  .p-accordion-toggle-icon {
+  color: var(--green-800);
 }

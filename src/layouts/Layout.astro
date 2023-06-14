@@ -7,9 +7,10 @@ import "primereact/resources/primereact.min.css";
 import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 
 // Components
-import AppFooter from "../components/footer/AppFooter.astro";
+import AppFooter from "../components/thinks/AppFooter.astro";
 import AppBottomBar from "../components/navigation/AppBottomBar";
 import AppTopBar from "../components/navigation/AppTopBar.astro";
+import { Button } from "primereact/button";
 export interface Props {
   title: string;
 }
@@ -44,12 +45,22 @@ const { title } = Astro.props;
       src="/node_modules/primeflex/primeflex.css"></script>
   </head>
   <body>
-    <AppTopBar />
-    <main>
-      <slot />
-    </main>
-    <AppFooter />
-    <AppBottomBar />
+    <div class="relative">
+      <AppTopBar />
+      <main>
+        <slot />
+      </main>
+      <AppFooter />
+      <a href="#" class="scroll-to-top">
+        <Button
+          label="Scroll to top"
+          icon="pi pi-arrow-up"
+          className="bg-green-400 hover:border-green-600 hover:bg-green-500 border-green-400"
+          rounded
+        /></a
+      >
+    </div>
+
     <style is:global>
       @font-face {
         font-family: "SolarVestaScript";
@@ -68,13 +79,38 @@ const { title } = Astro.props;
         );
       }
       html {
-        font-family: system-ui, sans-serif;
+        font-family: "Source Sans Pro", "Arial", sans-serif;
         background-color: #f6f6f6;
         scroll-behavior: smooth;
       }
       body {
         margin: 0;
         background: #fff;
+        -webkit-scrollbar {
+          display: none;
+        }
+
+        /* background: hsla(186, 33%, 94%, 1);
+
+        background: linear-gradient(
+          90deg,
+          hsla(186, 33%, 94%, 1) 0%,
+          hsla(165, 41%, 56%, 1) 100%
+        );
+
+        background: -moz-linear-gradient(
+          90deg,
+          hsla(186, 33%, 94%, 1) 0%,
+          hsla(165, 41%, 56%, 1) 100%
+        );
+
+        background: -webkit-linear-gradient(
+          90deg,
+          hsla(186, 33%, 94%, 1) 0%,
+          hsla(165, 41%, 56%, 1) 100%
+        );
+
+        filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#EBF4F5", endColorstr="#63BDA7", GradientType=1 ); */
       }
       main {
         width: 100%;
@@ -85,6 +121,38 @@ const { title } = Astro.props;
       }
       .no-bg {
         background: transparent !important;
+      }
+      .bg-glassmorphism {
+        /* From https://css.glass */
+        /* From https://css.glass */
+        /* From https://css.glass */
+        /* From https://css.glass */
+        /* From https://css.glass */
+        /* background: rgba(88, 153, 130, 0.56);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(2.3px);
+        -webkit-backdrop-filter: blur(2.3px); */
+      }
+      .scroll-to-top {
+        --offset: 50px;
+
+        position: sticky;
+        bottom: 20px;
+        margin-right: 10px;
+        place-self: end;
+        margin-top: calc(100vh + var(--offset));
+
+        /* visual styling */
+        text-decoration: none;
+        padding: 10px;
+        font-family: sans-serif;
+        border-radius: 100px;
+        white-space: nowrap;
+      }
+
+      .logo {
+        height: 8vh;
       }
     </style>
     <script>
