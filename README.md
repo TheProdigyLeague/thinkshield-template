@@ -19,7 +19,7 @@ Smart USB Protection: Restricts data transfer functions on USB ports to prevent 
 
 
 4. **Software and Data Protection**
-**Data Encryption:*8 Provides solutions for encrypting data on hard drives and in the cloud. 🔐
+**Data Encryption:** Provides solutions for encrypting data on hard drives and in the cloud. 🔐
 **AI-Powered Endpoint Protection:** Integrates with security software like SentinelOne to defend against malware and ransomware with real-time detection and response. 🛡️
 **Identity and Access Management:** Utilizes biometric authentication, multi-factor authentication (MFA), and FIDO-certified authenticators to secure user logins. 🔐
 
