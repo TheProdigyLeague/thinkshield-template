@@ -25,5 +25,5 @@ Smart USB Protection: Restricts data transfer functions on USB ports to prevent 
 
 5. **Security Management**
 **Centralized Control:** Allows IT teams to remotely manage and enforce security policies across a fleet of devices 💻.
-Firmware Assurance: Provides visibility into the status of firmware, helping to identify and remediate vulnerabilities 🛡️.
-Secure Erase: Enables remote wiping of data from a lost or stolen device 🚫.
+**Firmware Assurance:** Provides visibility into the status of firmware, helping to identify and remediate vulnerabilities 🛡️.
+**Secure Erase:** Enables remote wiping of data from a lost or stolen device 🚫.
